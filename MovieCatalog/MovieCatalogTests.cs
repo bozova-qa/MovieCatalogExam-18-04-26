@@ -90,7 +90,6 @@ namespace MovieCatalog
             var createResponse = JsonSerializer.Deserialize<ApiResponseDto>(response.Content);
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK), "Expected status code 200 OK.");
-            //Assert.That(a movie object is returned in the response)
             Assert.IsNotNull(createResponse.Movie);
             Assert.That(createResponse.Movie.Id, Is.Not.Null.Or.Empty);
             Assert.That(createResponse.Msg, Is.EqualTo("Movie created successfully!"));
