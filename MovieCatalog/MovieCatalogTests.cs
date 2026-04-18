@@ -181,7 +181,7 @@ namespace MovieCatalog
             string nonExistingMovieId = "1001";
             var editRequestData = new MovieDto
             {
-                Id = nonExistingMovieId, // match query param (important)
+                Id = nonExistingMovieId, 
                 Title = "Valid Title",
                 Description = "Valid Description",
             };
